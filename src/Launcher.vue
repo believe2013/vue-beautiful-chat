@@ -34,6 +34,10 @@
         <slot name="header">
         </slot>
       </template>
+      <template v-slot:first-message>
+        <slot name="first-message">
+        </slot>
+      </template>
       <template v-slot:user-avatar="scopedProps">
         <slot name="user-avatar" :user="scopedProps.user" :message="scopedProps.message">
         </slot>

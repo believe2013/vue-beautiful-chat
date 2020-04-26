@@ -8,7 +8,7 @@
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :close="closeChat"
       :colors="colors"
-      :isOpen="isChatOpen"
+      :isOpen="true"
       :messageList="messageList"
       :messageStyling="messageStyling"
       :newMessagesCount="newMessagesCount"
@@ -25,6 +25,17 @@
       @edit="editMessage"
       @remove="removeMessage"
     >
+      <template v-slot:first-message>
+        <div class="sc-message">
+          <div class="sc-message--content received">
+            <div class="sc-message--avatar has-tooltip" data-original-title="Matteo" style="background-image: url('https://avatars3.githubusercontent.com/u/1915989?s=230&v=4');"></div>
+            <div class="sc-message--text" style="color: rgb(34, 34, 34); background-color: rgb(234, 234, 234);">
+              <div class="sc-message--toolbox" style="background: rgb(234, 234, 234);"></div>
+              <p class="sc-message--text-content">Hi, let me know if you have any questions.</p>
+            </div>
+          </div>
+        </div>
+      </template>
       <template v-slot:text-message-toolbox="scopedProps">
         <button v-if="!scopedProps.me && scopedProps.message.type==='text'" @click.prevent="like(scopedProps.message.id)">
           👍
