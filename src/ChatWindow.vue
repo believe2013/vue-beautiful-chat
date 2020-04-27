@@ -51,12 +51,13 @@
       </template>
     </MessageList>
     <UserInput
-      v-if="!showUserList"
+      v-if="!showUserList && !disableSend"
       :showEmoji="showEmoji"
       :onSubmit="onUserInputSubmit"
       :suggestions="getSuggestions()"
       :showFile="showFile"
       :placeholder="placeholder"
+      :disableSend="disableSend"
       @onType="$emit('onType')"
       @edit="$emit('edit', $event)"
       :colors="colors" />
@@ -140,7 +141,11 @@ export default {
     disableUserListToggle: {
       type: Boolean,
       default: false
-    }
+    },
+    disableSend: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {

@@ -21,6 +21,7 @@
       :showFile="true"
       :showTypingIndicator="showTypingIndicator"
       :titleImageUrl="titleImageUrl"
+      :disableSend="true"
       @onType="handleOnType"
       @edit="editMessage"
       @remove="removeMessage"

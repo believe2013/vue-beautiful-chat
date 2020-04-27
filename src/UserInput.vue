@@ -13,7 +13,7 @@
         @focus="setInputActive(true)"
         @blur="setInputActive(false)"
         @keydown="handleKey"
-        contentEditable="true"
+        :contentEditable="!disableSend"
         :placeholder="placeholder"
         class="sc-user-input--text"
         ref="userInput"
@@ -110,7 +110,7 @@ export default {
     colors: {
       type: Object,
       required: true
-    }
+    },
   },
   data () {
     return {

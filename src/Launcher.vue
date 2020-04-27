@@ -25,6 +25,7 @@
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :messageStyling="messageStyling"
       :disableUserListToggle="disableUserListToggle"
+      :disableSend="disableSend"
       @scrollToTop="$emit('scrollToTop')"
       @onType="$emit('onType')"
       @edit="$emit('edit', $event)"
@@ -197,6 +198,10 @@ export default {
       default: () => false
     },
     disableUserListToggle: {
+      type: Boolean,
+      default: false
+    },
+    disableSend: {
       type: Boolean,
       default: false
     },
