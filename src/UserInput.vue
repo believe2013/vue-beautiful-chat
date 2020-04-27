@@ -13,7 +13,7 @@
         @focus="setInputActive(true)"
         @blur="setInputActive(false)"
         @keydown="handleKey"
-        :contentEditable="!disableSend"
+        :contentEditable="true"
         :placeholder="placeholder"
         class="sc-user-input--text"
         ref="userInput"
