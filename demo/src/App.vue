@@ -8,7 +8,7 @@
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :close="closeChat"
       :colors="colors"
-      :isOpen="isChatOpen"
+      :isOpen="true"
       :messageList="messageList"
       :messageStyling="messageStyling"
       :newMessagesCount="newMessagesCount"

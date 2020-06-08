@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="showLauncher" class="sc-launcher" :class="{opened: isOpen}" @click.stop.prevent="$event => {isOpen ? close($event) : openAndFocus($event)}" :style="{backgroundColor: colors.launcher.bg}">
+    <div v-if="showLauncher" class="sc-launcher" :class="{opened: isOpen}" @click.prevent="isOpen ? close() : openAndFocus()" :style="{backgroundColor: colors.launcher.bg}">
       <div v-if="newMessagesCount > 0 && !isOpen" class="sc-new-messsages-count">
         {{newMessagesCount}}
       </div>
@@ -207,9 +207,7 @@ export default {
     },
   },
   methods: {
-    openAndFocus(e) {
-      //console.log( e)
-      //e.stopPropagation()
+    openAndFocus() {
       this.open();
       this.$root.$emit('focusUserInput');
     }
