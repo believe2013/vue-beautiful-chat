@@ -273,6 +273,7 @@ export default {
   bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  background: transparent;
 }
 
 .sc-user-input--text:empty:before {
