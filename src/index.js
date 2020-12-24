@@ -1,7 +1,11 @@
 import Launcher from './Launcher.vue'
+import MessageList from './MessageList.vue'
+import UserInput from './UserInput.vue'
 import VTooltip from 'v-tooltip'
 
 const defaultComponentName = 'beautiful-chat'
+const messageListComponentName = 'beautiful-chat-message-list'
+const userInputComponentName = 'beautiful-chat-user-input'
 
 const Plugin = {
   install (Vue, options = {}) {
@@ -28,6 +32,8 @@ const Plugin = {
      * Sets custom component name (if provided)
      */
     Vue.component(this.componentName, Launcher)
+    Vue.component(messageListComponentName, MessageList)
+    Vue.component(userInputComponentName, UserInput)
     Vue.use(VTooltip)
   }
 }

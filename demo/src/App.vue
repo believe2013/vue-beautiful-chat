@@ -4,6 +4,19 @@
       :chosenColor="chosenColor"
       :colors="colors"
     />
+
+    <!--<beautiful-chat-message-list
+      :messages="messageList"
+      :participants="participants"
+      :showTypingIndicator="showTypingIndicator"
+      :colors="colors"
+      :alwaysScrollToBottom="alwaysScrollToBottom"
+      :messageStyling="messageStyling"
+      message-width="100%"
+    >
+
+    </beautiful-chat-message-list>-->
+
     <beautiful-chat 
       :alwaysScrollToBottom="alwaysScrollToBottom"
       :close="closeChat"
@@ -122,6 +135,8 @@ import Header from './Header.vue'
 import Footer from './Footer.vue'
 import TestArea from './TestArea.vue'
 import availableColors from './colors'
+
+//import MessageList from '../../src/MessageList'
 
 export default {
   name: 'app',

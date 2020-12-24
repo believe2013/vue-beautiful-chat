@@ -1,5 +1,5 @@
 <template>
-  <div class="sc-message">
+  <div class="sc-message" :style="messageStyle">
     <div class="sc-message--content" :class="{
         sent: message.author === 'me',
         received: message.author !== 'me' && message.type !== 'system',
@@ -67,6 +67,10 @@ export default {
       type: Object,
       required: true
     },
+    width: {
+      type: String,
+      default: '300px'
+    },
     colors: {
       type: Object,
       required: true
@@ -103,6 +107,11 @@ export default {
     },
     chatImageUrl(){
       return (this.user && this.user.imageUrl) || this.chatIcon;
+    },
+    messageStyle() {
+      return {
+        width: this.width
+      }
     }
   }
 }
